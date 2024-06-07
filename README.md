@@ -4,21 +4,50 @@
 
 > spell out the input text
 
-Markup.
-
 ```html
 <text-to-speech>HTML</text-to-speech>
+```
+
+### Attributes
+
+- `speech`: alternative text
+
+```html
 <text-to-speech speech="Cascading Style Sheets">CSS</text-to-speech>
 ```
 
-Styles.
+### Styles
+
+- `tts-button`: button element exposed from the shadow DOM
 
 ```css
-text-to-speech {
-  /* ... */
-}
-
 ::part(tts-button) {
   /* ... */
 }
+```
+
+## typewriter-effect
+
+> display text with a typewriter effect
+
+```html
+<typewriter-effect>is production ready</typewriter-effect>
+```
+
+### Attributes
+
+- `lines`: lines of text to display in succession
+
+- `separator`: delimiting character [`.`]
+
+- `rate`: time to show/remove one letter. [`5`]
+
+- `delay`: number of milliseconds to persist the lines. [`3000`]
+
+```html
+<typewriter-effect
+  lines="dropped out of college.feels like SPA with SSR.is a library, like React"
+  rate="4"
+  >is production ready</typewriter-effect
+>
 ```
