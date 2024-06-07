@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typewriter-effect</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: system-ui;
+      }
+
+      main {
+        max-inline-size: 60ch;
+        margin-inline: auto;
+        padding: 1rem;
+      }
+
+      typewriter-effect {
+        text-decoration: underline hsl(119 43% 50%);
+      }
+
+      typewriter-effect::after {
+        content: "|";
+        margin-inline-start: 0.1rem;
+        animation: blank 1s infinite linear;
+      }
+
+      @keyframes blank {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        25%,
+        75% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>
+        TypeScript ORM that
+        <br />
+        <typewriter-effect
+          lines="dropped out of college.feels like SPA with SSR.is a library, like React.developers love.is not as good as Django.made friends with SQL.is familiar, but different.is a JavaScript ORM too.will be here for a while"
+          rate="4"
+          >is production ready</typewriter-effect>
+      </h1>
+    </main>
+
+    <script src="typewriter-effect.js"></script>
+  </body>
+</html>
