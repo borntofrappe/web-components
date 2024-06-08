@@ -51,3 +51,17 @@
   >is production ready</typewriter-effect
 >
 ```
+
+## online-status
+
+> notify the online status of the browser
+
+```html
+<online-status></online-status>
+```
+
+### Styles
+
+- `--color-background`: color of the circle behind the online/offline icon
+
+- `--color-online` and `--color-offline`: color of the icon in the online and offline state
