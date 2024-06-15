@@ -10,7 +10,7 @@
 
 ### Attributes
 
-- `speech`: alternative text
+- `speech`: alternative text `[textContent]`
 
 ```html
 <text-to-speech speech="Cascading Style Sheets">CSS</text-to-speech>
@@ -34,23 +34,24 @@
 <typewriter-effect>is production ready</typewriter-effect>
 ```
 
-### Attributes
-
-- `lines`: lines of text to display in succession
-
-- `separator`: delimiting character [`.`]
-
-- `rate`: time to show/remove one letter. [`5`]
-
-- `delay`: number of milliseconds to persist the lines. [`3000`]
-
 ```html
 <typewriter-effect
   lines="dropped out of college.feels like SPA with SSR.is a library, like React"
   rate="4"
-  >is production ready</typewriter-effect
 >
+  is production ready
+</typewriter-effect>
 ```
+
+### Attributes
+
+- `lines`: lines of text to display in succession
+
+- `separator`: character separating multiple lines [`.`]
+
+- `rate`: time to show and remove one letter [`5`]
+
+- `delay`: milliseconds to display a complete line [`3000`]
 
 ## online-status
 
@@ -68,7 +69,7 @@
 
 ## dot-matrix-display
 
-> use the characters in a `pre` element to create a low-res dot-matrix display with SVG
+> reproduce ASCII art with a low-res, SVG, dot-matrix display
 
 ```html
 <dot-matrix-display>
