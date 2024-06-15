@@ -65,3 +65,55 @@
 - `--color-background`: color of the circle behind the online/offline icon
 
 - `--color-online` and `--color-offline`: color of the icon in the online and offline state
+
+## dot-matrix-display
+
+> use the characters in a `pre` element to create a low-res dot-matrix display with SVG
+
+```html
+<dot-matrix-display>
+  <pre><!-- ... --></pre>
+</dot-matrix-display>
+```
+
+```html
+<pre>
+o o ooo o   o    o 
+o o o   o   o   o o
+ooo oo  o   o   o o
+o o o   o   o   o o
+o o ooo ooo ooo  o 
+</pre>
+```
+
+```html
+<pre rounding="0.1" inset="0.2">
+                       
+.......................
+..o.o.ooo.o...o....o...
+..o.o.o...o...o...o.o..
+..ooo.oo..o...o...o.o..
+..o.o.o...o...o...o.o..
+..o.o.ooo.ooo.ooo..o...
+.......................
+                       </pre
+>
+```
+
+## Attributes
+
+- `separator`: delimiting character [`"\n"`]
+
+- `dot`: dot character [`"o"`]
+
+- `matrix`: matrix character [`"."`]
+
+- `inset`: "padding" for the base shape [`"0.2"`]
+
+- `rounding`: rounding for the base shape [`"0.5"`]
+
+## Styles
+
+- `color` and `background`: color of the base cell through inheritance and color of the background through the container
+
+- `--color-dot`, `--color-matrix`, and `--color-display`: color of the dot [`"currentColor"`], color of the the matrix [`"transparent"`], color of the makeshift background [`"none"`]
