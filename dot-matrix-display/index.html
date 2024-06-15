@@ -7,6 +7,8 @@
     <style>
       * {
         box-sizing: border-box;
+        padding: 0;
+        margin: 0;
       }
 
       body {
@@ -18,21 +20,52 @@
         max-inline-size: 60ch;
         margin-inline: auto;
       }
+
+      main > * + * {
+        margin-block-start: 1rem;
+      }
+
+      dot-matrix-display:nth-of-type(1) {
+        color: hsl(0 0% 30%);
+        background: hsl(0 0% 95%);
+      }
+
+      dot-matrix-display:nth-of-type(2) {
+        --color-dot: hsl(235 11% 41%);
+        --color-matrix: hsl(69 49% 60%);
+        --color-display: hsl(69 82% 64%);
+      }
     </style>
   </head>
   <body>
     <main>
+      <h1><code>dot-matrix-display</code></h1>
       <dot-matrix-display>
-        <pre>
-o o ooo o   o    o 
-o o o   o   o   o o
-ooo oo  o   o   o o
-o o o   o   o   o o
-o o ooo ooo ooo  o </pre
-        >
+        <pre></pre>
+      </dot-matrix-display>
+      <dot-matrix-display rounding="0.1" inset="0.2">
+        <pre></pre>
       </dot-matrix-display>
     </main>
 
+    <script>
+      const [p1, p2] = [...document.querySelectorAll("pre")];
+      p1.textContent = `o o ooo o   o    o 
+o o o   o   o   o o
+ooo oo  o   o   o o
+o o o   o   o   o o
+o o ooo ooo ooo  o `;
+
+      p2.textContent = `                         
+ ....................... 
+ ..o.o.ooo.o...o....o... 
+ ..o.o.o...o...o...o.o.. 
+ ..ooo.oo..o...o...o.o.. 
+ ..o.o.o...o...o...o.o.. 
+ ..o.o.ooo.ooo.ooo..o... 
+ ....................... 
+                         `;
+    </script>
     <script src="dot-matrix-display.js"></script>
   </body>
 </html>
