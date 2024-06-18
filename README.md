@@ -103,8 +103,6 @@ o o ooo ooo ooo  o
 
 ## Attributes
 
-- `separator`: delimiting character [`"\n"`]
-
 - `dot`: dot character [`"o"`]
 
 - `matrix`: matrix character [`"."`]
