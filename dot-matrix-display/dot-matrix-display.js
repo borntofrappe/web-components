@@ -59,7 +59,7 @@ class DotMatrixDisplay extends HTMLElement {
 			<defs>
 				<rect id="p" x="${i}" y="${i}" width="${size}" height="${size}" rx="${rx}" />
 				<use id="${ids[dot]}" href="#p" fill="var(--color-dot, currentColor)" />
-				<use id="${ids[matrix]}" href="#p" fill="var(--color-matrix, transparent)" />
+				<use id="${ids[matrix]}" href="#p" fill="var(--color-matrix, var(--color-dot))" />
 			</defs>
 			<rect fill="var(--color-display, none)" width="${width}" height="${height}" />
 			${cells
