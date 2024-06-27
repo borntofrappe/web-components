@@ -63,7 +63,7 @@ class DotMatrixDisplay extends HTMLElement {
 			<rect fill="var(--color-display, none)" width="${width}" height="${height}" />
 			${cells
         .map(({ x, y, href }) => `<use x="${x}" y="${y}" href="${href}" />`)
-        .join()}
+        .join('')}
 		</svg>`;
   }
 
