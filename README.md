@@ -116,3 +116,13 @@ o o ooo ooo ooo  o
 - `color` and `background`: color of the base cell through inheritance and color of the background through the container
 
 - `--color-dot`, `--color-matrix`, and `--color-display`: color of the circle used for the dot character [`"currentColor"`], color of the circles used for the matrix [`"var(--color-dot)"`], color of the makeshift background [`"none"`]
+
+## toggle-password
+
+> toggle an input of type password to and from type text
+
+```html
+<toggle-password>
+  <input type="password" />
+</toggle-password>
+```
