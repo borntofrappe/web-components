@@ -101,7 +101,7 @@ o o ooo ooo ooo  o
 >
 ```
 
-## Attributes
+### Attributes
 
 - `dot`: dot character [`"o"`]
 
@@ -111,7 +111,7 @@ o o ooo ooo ooo  o
 
 - `rounding`: rounding for the base shape [`"0.5"`]
 
-## Styles
+### Styles
 
 - `color` and `background`: color of the base cell through inheritance and color of the background through the container
 
