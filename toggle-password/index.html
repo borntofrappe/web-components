@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toggle-password</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: system-ui;
+        line-height: 1.5;
+      }
+
+      main {
+        padding: 1rem;
+        max-inline-size: 60ch;
+        margin-inline: auto;
+      }
+
+      main > * + * {
+        margin-block-start: 0.75rem;
+      }
+
+      .visually-hidden:not(:focus):not(:active):not(:focus-within) {
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      form > * + * {
+        margin-block-start: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><code>toggle-password</code></h1>
+
+      <form>
+        <div>
+          <label>
+            <span>Include name</span>
+            <input id="name" name="name" type="text" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>Include password</span>
+            <toggle-password>
+              <input id="password" name="password" type="password" />
+            </toggle-password>
+          </label>
+        </div>
+
+        <div>
+          <label for="confirm-password"> Confirm password </label>
+          <toggle-password>
+            <input
+              id="confirm-password"
+              name="confirm-password"
+              type="password"
+            />
+          </toggle-password>
+        </div>
+        <button>Submit</button>
+      </form>
+    </main>
+    <script src="toggle-password.js"></script>
+    <script>
+      document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
