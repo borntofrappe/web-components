@@ -126,3 +126,33 @@ o o ooo ooo ooo  o
   <input type="password" />
 </toggle-password>
 ```
+
+## braille-cipher
+
+> render text in Braille
+
+```html
+<!-- character definition -->
+<braille-characters></braille-characters>
+
+<braille-cipher text="Dig here."></braille-cipher>
+```
+
+### Attributes
+
+- `text`: string [`"text not found"`]
+
+- `separator`: key to break the text into new lines [`"|"`]
+
+### Styles
+
+- `color`: color the dots
+
+When styling the container remember the default value of the `display` property.
+
+```css
+braille-cipher {
+  display: block;
+  background: hsl(0 0% 97%);
+}
+```
