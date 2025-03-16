@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>braille-cipher</title>
+
+    <style>
+      h1 {
+        margin: 0;
+      }
+      
+      main {
+        box-sizing: border-box;
+        max-inline-size: 60ch;
+        margin-inline: auto;
+        color: hsl(0 0% 20%);
+
+        & > * + * {
+          display: block;
+          margin-block-start: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <braille-characters></braille-characters>
+
+    <main>
+      <h1><code>braille-cipher</code></h1>
+      <braille-cipher
+        text="abcde|fghij|klmno|pqrst|uvwxy|z . ,"
+      ></braille-cipher>
+    </main>
+
+    <script src="braille.js"></script>
+  </body>
+</html>
